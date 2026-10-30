@@ -1,0 +1,66 @@
+.echo-logo {
+  flex: none;
+  overflow: visible;
+  transition:
+    transform var(--transition),
+    filter var(--transition);
+}
+
+.echo-logo__disc {
+  fill: var(--accent);
+}
+
+.echo-logo__bar {
+  fill: var(--accent-contrast);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.echo-logo--animated .echo-logo__disc {
+  filter: drop-shadow(
+    0 0 12px color-mix(in srgb, var(--accent) 34%, transparent)
+  );
+}
+
+.echo-logo--animated .echo-logo__bar {
+  animation: echo-wave 1.15s ease-in-out infinite;
+  will-change: transform;
+}
+
+.echo-logo--animated .echo-logo__bar:nth-of-type(2) {
+  animation-delay: 0.08s;
+  animation-duration: 1.32s;
+}
+
+.echo-logo--animated .echo-logo__bar:nth-of-type(3) {
+  animation-delay: 0.16s;
+  animation-duration: 0.94s;
+}
+
+.echo-logo--animated .echo-logo__bar:nth-of-type(4) {
+  animation-delay: 0.24s;
+  animation-duration: 1.24s;
+}
+
+.echo-logo--animated .echo-logo__bar:nth-of-type(5) {
+  animation-delay: 0.32s;
+  animation-duration: 1.42s;
+}
+
+@keyframes echo-wave {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scaleY(0.48);
+  }
+
+  38% {
+    opacity: 1;
+    transform: scaleY(1.14);
+  }
+
+  66% {
+    opacity: 0.86;
+    transform: scaleY(0.8);
+  }
+}

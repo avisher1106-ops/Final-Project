@@ -1,0 +1,161 @@
+:root {
+  color-scheme: light;
+
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-contrast: #ffffff;
+  --accent-soft-strength: 10%;
+  --accent-ring-strength: 22%;
+  --accent-shadow-strength: 28%;
+
+  --color-primary: var(--accent);
+  --color-primary-hover: var(--accent-hover);
+  --color-primary-soft: color-mix(
+    in srgb,
+    var(--accent) var(--accent-soft-strength),
+    var(--color-bg)
+  );
+  --color-primary-ring: color-mix(
+    in srgb,
+    var(--accent) var(--accent-ring-strength),
+    transparent
+  );
+
+  --color-bg: #ffffff;
+  --color-sidebar: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-text: #172033;
+  --color-text-muted: #667085;
+  --color-text-subtle: #98a2b3;
+  --color-border: #e6e9ef;
+  --color-border-strong: #d5dae3;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fef2f2;
+  --color-success: #15803d;
+  --color-navbar: rgba(255, 255, 255, 0.82);
+  --color-overlay: rgba(15, 23, 42, 0.48);
+
+  --color-code-bg: #0f172a;
+  --color-code-header: #111827;
+  --color-code-text: #e2e8f0;
+  --color-code-muted: #94a3b8;
+  --color-code-border: rgba(148, 163, 184, 0.16);
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 18px 44px rgba(15, 23, 42, 0.12);
+  --shadow-primary: 0 10px 26px
+    color-mix(
+      in srgb,
+      var(--accent) var(--accent-shadow-strength),
+      transparent
+    );
+
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  --gradient-accent-soft: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 16%, var(--color-surface)),
+    var(--color-surface)
+  );
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --navbar-height: 64px;
+  --sidebar-width: 288px;
+  --content-width: 780px;
+
+  --font-sans: "Manrope", "Heebo", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --transition: 180ms ease;
+  --scrollbar-thumb: #d5d8de;
+}
+
+[data-accent="emerald"] {
+  --accent: #047857;
+  --accent-hover: #065f46;
+  --accent-contrast: #ffffff;
+}
+
+[data-accent="violet"] {
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-contrast: #ffffff;
+}
+
+[data-accent="rose"] {
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --accent-contrast: #ffffff;
+}
+
+[data-accent="amber"] {
+  --accent: #b45309;
+  --accent-hover: #92400e;
+  --accent-contrast: #ffffff;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --accent-contrast: #0b1120;
+  --accent-soft-strength: 18%;
+  --accent-ring-strength: 32%;
+  --accent-shadow-strength: 36%;
+
+  --color-bg: #0b1120;
+  --color-sidebar: #0f172a;
+  --color-surface: #111c2e;
+  --color-surface-muted: #172236;
+  --color-text: #e7ecf5;
+  --color-text-muted: #9ba8bb;
+  --color-text-subtle: #718096;
+  --color-border: #243044;
+  --color-border-strong: #334155;
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.1);
+  --color-success: #4ade80;
+  --color-navbar: rgba(11, 17, 32, 0.82);
+  --color-overlay: rgba(2, 6, 23, 0.7);
+
+  --color-code-bg: #020617;
+  --color-code-header: #0f172a;
+  --color-code-text: #e2e8f0;
+  --color-code-muted: #94a3b8;
+  --color-code-border: rgba(148, 163, 184, 0.14);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.16);
+  --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 20px 46px rgba(0, 0, 0, 0.34);
+
+  --scrollbar-thumb: #334155;
+}
+
+[data-theme="dark"][data-accent="emerald"] {
+  --accent: #34d399;
+  --accent-hover: #6ee7b7;
+  --accent-contrast: #022c22;
+}
+
+[data-theme="dark"][data-accent="violet"] {
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --accent-contrast: #1e1b4b;
+}
+
+[data-theme="dark"][data-accent="rose"] {
+  --accent: #fb7185;
+  --accent-hover: #fda4af;
+  --accent-contrast: #4c0519;
+}
+
+[data-theme="dark"][data-accent="amber"] {
+  --accent: #fbbf24;
+  --accent-hover: #fcd34d;
+  --accent-contrast: #451a03;
+}
